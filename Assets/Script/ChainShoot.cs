@@ -126,4 +126,25 @@ public class ChainShoot : MonoBehaviour
             }
         }
     }
+
+    void StartShooting()
+    {
+        shooting = true;
+
+        if(playerEnemyDetector != null && playerFirePoint != null && lineRendererPrefab != null)
+        {
+            if (!shot)
+            {
+                shot = true;
+
+                currentClosestEnemy = playerEnemyDetector.GetClosestEnemy();
+                NewLineRenderer(playerFirePoint, playerEnemyDetector.GetClosestEnemy().transform, true);
+
+                if (maximumEnemiesInChain > 1)
+                {
+                    StartCoroutine(ChainReaction(playerEnemyDetector.GetClosestEnemy()));
+                }
+            }
+        }
+    }
 }

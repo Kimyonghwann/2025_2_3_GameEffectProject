@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 512540593}
   - component: {fileID: 512540597}
   - component: {fileID: 512540592}
-  - component: {fileID: 512540596}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -231,22 +230,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &512540596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 512540591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 660db45bd2e490441988e365eb061ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detectionRadius: 10
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &512540597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -999,6 +982,7 @@ GameObject:
   - component: {fileID: 1632156747}
   - component: {fileID: 1632156746}
   - component: {fileID: 1632156745}
+  - component: {fileID: 1632156749}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1095,6 +1079,22 @@ Transform:
   - {fileID: 1571778602}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1632156749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632156744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 660db45bd2e490441988e365eb061ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRadius: 10
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &1690759567
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,8 +19,8 @@ public class EnemyDetector : MonoBehaviour
 
             foreach (Collider enemyCollider in enemiesInRange)
             {
-                if (enemyCollider.gameObject == this)
-                    continue;
+                if (enemyCollider.gameObject == this.gameObject)
+                        continue;
 
                 Vector3 directionToTarget = enemyCollider.transform.position = currentPosition;
                 float dSqrToTarget = directionToTarget.sqrMagnitude;
